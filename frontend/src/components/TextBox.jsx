@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../App.css";
 
 function TextBox() {
 	const [email, newEmail] = useState("");
@@ -10,12 +11,17 @@ function TextBox() {
 				type="text"
 				name="Email"
 				id="email"
-				size={50}
 				onChange={(event) => newEmail(event.target.value)}
+				className="text-box"
 			/>
 
 			<label htmlFor="next"></label>
-			<input type="button" value="Next" id="next" />
+			<input
+				type="button"
+				value="Next"
+				id="next"
+				className="next-button"
+			/>
 		</div>
 	);
 }
